@@ -1,5 +1,6 @@
-# Github Codespace 개발환경 유지를 위한 예제 입니다.
-Source Code를 Clone 하시어 적용 하시면 됩니다.
+#BEST_WARRIORR
+특급전사를 달성을 위한 소모임 앱
 
-# Flutter DevContainer
-Tempalte repo for Flutter DevContainer
+##프로젝트 배경
+
+
