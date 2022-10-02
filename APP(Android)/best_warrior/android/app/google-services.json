@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "467473321965",
+    "project_id": "best-warrior-c3cdd",
+    "storage_bucket": "best-warrior-c3cdd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:467473321965:android:0c9261bcea47af09a4e1e4",
+        "android_client_info": {
+          "package_name": "com.example.best_warrior"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "467473321965-1lptmvhdf9nro933i5aa7vm9fgiubea1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBi6XfKs8zmL95gMhNDtHhxA-CLQj_piDg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "467473321965-1lptmvhdf9nro933i5aa7vm9fgiubea1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
