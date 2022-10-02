@@ -8,10 +8,12 @@ class ProfileHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: [
-        _buildHeaderProfile()
-      ],
+      children: [_buildHeaderProfile()],
     );
+  }
+
+  Widget _buildHeaderAvatar() {
+    return SizedBox();
   }
 
   Widget _buildHeaderProfile() {
