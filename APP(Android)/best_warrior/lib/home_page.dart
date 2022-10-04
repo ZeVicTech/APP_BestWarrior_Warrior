@@ -1,5 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'component/auth.dart';
+import 'package:best_warrior/component/auth.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
