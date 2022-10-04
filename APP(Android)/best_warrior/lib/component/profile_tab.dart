@@ -32,8 +32,10 @@ class _ProfileTabState extends State<ProfileTab>
   Widget _buildTabBar() {
     return TabBar(
       controller: _tabController,
+      labelColor: Colors.yellow,
+      indicatorColor: Colors.black,
       tabs: [
-        Tab(text: "멘토로 있는 방"),
+        Tab(text: "멘토로 있는 방",),
         Tab(text: "멘티로 있는 방"),
       ],
     );
