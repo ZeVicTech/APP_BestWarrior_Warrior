@@ -35,7 +35,9 @@ class _ProfileTabState extends State<ProfileTab>
       labelColor: Colors.yellow,
       indicatorColor: Colors.black,
       tabs: [
-        Tab(text: "멘토로 있는 방",),
+        Tab(
+          text: "멘토로 있는 방",
+        ),
         Tab(text: "멘티로 있는 방"),
       ],
     );
@@ -45,12 +47,36 @@ class _ProfileTabState extends State<ProfileTab>
     return TabBarView(
       controller: _tabController,
       children: [
-        Container(
-          color: Colors.red,
+        ListView(
+          scrollDirection: Axis.vertical,
+          children: [
+            Container(
+              color: Colors.red,
+              height: 50,
+              child: Text(
+                'A',
+                textAlign: TextAlign.center,
+              ),
+            ),
+            Container(
+              color: Colors.blue,
+              height: 50,
+              child: Text(
+                'A',
+                textAlign: TextAlign.center,
+              ),
+            ),
+            Container(
+              color: Colors.green,
+              height: 50,
+              child: Text(
+                'A',
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ],
         ),
-        Container(
-          color: Colors.green,
-        ),
+        Container(color: Colors.black,)
       ],
     );
   }
