@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
   }
 
   Widget _title() {
-    return const Text('Firebase Auth');
+    return const Text('베스트 워리어', style: TextStyle(fontSize: 50, color:Colors.white));
   }
 
   Widget _userUid() {
@@ -22,15 +22,19 @@ class HomePage extends StatelessWidget {
   Widget _signOutButton() {
     return ElevatedButton(
       onPressed: signOut,
-      child: const Text('Sign Out'),
+      child: const Text('로그아웃'),
     );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: _title(),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(200),
+        child: AppBar(
+          title: _title(),
+          
+        ),
       ),
       body: Container(
         height: double.infinity,

@@ -42,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _title() {
-    return const Text('Firebase Auth');
+    return const Text('베스트 워리어');
   }
 
   Widget _entryField(
@@ -59,7 +59,7 @@ class _LoginPageState extends State<LoginPage> {
 
 
   Widget _errorMessage() {
-    return Text(errorMessage == '' ? '' : 'Humm ? $errorMessage');
+    return Text(errorMessage == '' ? '' : '다시 확인해주십시요 $errorMessage');
   }
 
   Widget _submitButton() {
@@ -82,7 +82,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {     //구성 방식
     return Scaffold(
       appBar: AppBar(
         title: _title(),

@@ -3,9 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'package:best_warrior/component/widget_tree.dart';
-
 Future<void> main() async {
-    WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(MyApp());
 }
@@ -23,4 +22,4 @@ class MyApp extends StatelessWidget {
       home: const WidgetTree(),
     );
   }
-} 
+}
