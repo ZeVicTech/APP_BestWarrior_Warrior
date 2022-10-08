@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:best_warrior/component/auth.dart';
 import 'package:flutter/material.dart';
-
+//메인 페이지
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
 

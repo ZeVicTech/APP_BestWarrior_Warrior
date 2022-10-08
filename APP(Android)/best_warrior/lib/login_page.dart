@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'component/auth.dart';
-
+import 'package:firebase_database/firebase_database.dart';
+//로그인 페이지
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -13,8 +14,13 @@ class _LoginPageState extends State<LoginPage> {
   String? errorMessage = '';
   bool isLogin = true;
 
-  final TextEditingController _controllerEmail = TextEditingController();
-  final TextEditingController _controllerPassword = TextEditingController();
+  final TextEditingController _controllerEmail = TextEditingController();     //이메일
+  final TextEditingController _controllerPassword = TextEditingController();  //비밀번호
+  final TextEditingController _controllername = TextEditingController();    //이름
+  final TextEditingController _controllerarmy = TextEditingController();    //소속부대
+  final TextEditingController _controllerclasses = TextEditingController(); //계급
+  final TextEditingController _controllernumber = TextEditingController();  //군번
+  DatabaseReference ref = FirebaseDatabase.instance.ref("USER"); //데이터 참조 변수
 
   Future<void> signInWithEmailAndPassword() async {
     try {
@@ -39,6 +45,14 @@ class _LoginPageState extends State<LoginPage> {
         errorMessage = e.message;
       });
     }
+    //여기에 실시간 데이터베이스 저장
+    await ref.set({
+      "이름:":_controllername.text,
+      "소속부대":_controllerarmy.text,
+      "계급":_controllerclasses.text,
+      "군번":_controllernumber.text
+    });
+
   }
 
   Widget _title() {
@@ -56,7 +70,6 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
   }
-
 
   Widget _errorMessage() {
     return Text(errorMessage == '' ? '' : '다시 확인해주십시요 $errorMessage');
@@ -97,6 +110,14 @@ class _LoginPageState extends State<LoginPage> {
           children: <Widget>[
             _entryField('email', _controllerEmail),
             _entryField('password', _controllerPassword),
+            if(!isLogin)
+              _entryField('이름', _controllername),
+            if(!isLogin)  
+              _entryField('계급', _controllerclasses),
+            if(!isLogin)
+              _entryField('소속부대', _controllerarmy),
+            if(!isLogin)
+              _entryField('군번', _controllernumber),
             _errorMessage(),
             _submitButton(),
             _loginOrRegisterButton(),
