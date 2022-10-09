@@ -29,12 +29,8 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(200),
-        child: AppBar(
-          title: _title(),
-          
-        ),
+      appBar: AppBar(
+        title: _title(),
       ),
       body: Container(
         height: double.infinity,
