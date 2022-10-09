@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'component/auth.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'profile_page.dart';
 
 //로그인 페이지
 class LoginPage extends StatefulWidget {
