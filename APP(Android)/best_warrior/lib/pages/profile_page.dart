@@ -3,7 +3,7 @@ import 'package:best_warrior/component/profile_tab.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-import 'component/profile_header.dart';
+import '../component/profile_header.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});

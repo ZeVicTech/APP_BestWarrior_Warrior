@@ -1,6 +1,6 @@
 import 'package:best_warrior/component/auth.dart';
-import 'package:best_warrior/home_page.dart';
-import 'package:best_warrior/login_page.dart';
+import 'package:best_warrior/pages/home_page.dart';
+import 'package:best_warrior/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
 class WidgetTree extends StatefulWidget {
