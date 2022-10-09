@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "467473321965",
+    "firebase_url": "https://best-warrior-c3cdd-default-rtdb.firebaseio.com",
     "project_id": "best-warrior-c3cdd",
     "storage_bucket": "best-warrior-c3cdd.appspot.com"
   },
@@ -29,6 +30,13 @@
             {
               "client_id": "467473321965-1lptmvhdf9nro933i5aa7vm9fgiubea1.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "467473321965-1l64lra79ntpr9e2dlgteefhif1d5h4s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.bestWarrior"
+              }
             }
           ]
         }

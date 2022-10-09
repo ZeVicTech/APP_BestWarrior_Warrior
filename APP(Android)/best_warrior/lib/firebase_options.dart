@@ -57,6 +57,7 @@ class DefaultFirebaseOptions {
     appId: '1:467473321965:android:0c9261bcea47af09a4e1e4',
     messagingSenderId: '467473321965',
     projectId: 'best-warrior-c3cdd',
+    databaseURL: 'https://best-warrior-c3cdd-default-rtdb.firebaseio.com',
     storageBucket: 'best-warrior-c3cdd.appspot.com',
   );
 }

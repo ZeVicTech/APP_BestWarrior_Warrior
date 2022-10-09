@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>467473321965-1l64lra79ntpr9e2dlgteefhif1d5h4s.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.467473321965-1l64lra79ntpr9e2dlgteefhif1d5h4s</string>
+	<key>API_KEY</key>
+	<string>AIzaSyClrOcj9voU39owu0Rbr-UEBbbNh_ZSUpQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>467473321965</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.bestWarrior</string>
+	<key>PROJECT_ID</key>
+	<string>best-warrior-c3cdd</string>
+	<key>STORAGE_BUCKET</key>
+	<string>best-warrior-c3cdd.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:467473321965:ios:440a7b7c2ca00cdaa4e1e4</string>
+	<key>DATABASE_URL</key>
+	<string>https://best-warrior-c3cdd-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>
