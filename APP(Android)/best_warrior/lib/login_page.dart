@@ -50,10 +50,12 @@ class _LoginPageState extends State<LoginPage> {
     }
     //여기에 실시간 데이터베이스 저장
     await ref.set({
-      "이름:": _controllername.text,
-      "소속부대": _controllerarmy.text,
-      "계급": _controllerclasses.text,
-      "군번": _controllernumber.text
+      _controllername.text: {
+        "이름:": _controllername.text,
+        "소속부대": _controllerarmy.text,
+        "계급": _controllerclasses.text,
+        "군번": _controllernumber.text,
+      }
     });
   }
 
