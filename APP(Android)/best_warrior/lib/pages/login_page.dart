@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import '../component/auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
+
 //로그인 페이지
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -66,8 +67,12 @@ class _LoginPageState extends State<LoginPage> {
         Icon(
           CupertinoIcons.flame,
           color: Colors.deepOrangeAccent[400],
-          size: 40,
-        )
+          size: 200,
+        ),
+        Text(
+          '베스트 워리어',
+          style: TextStyle(fontSize: 40),
+        ),
       ],
     );
   }
@@ -110,7 +115,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     //구성 방식
-    if (isLogin)  //로그인 페이지
+    if (isLogin) //로그인 페이지
       // ignore: curly_braces_in_flow_control_structures
       return Scaffold(
         body: Container(
@@ -131,12 +136,9 @@ class _LoginPageState extends State<LoginPage> {
           ),
         ),
       );
-    else  //회원가입 페이지
+    else //회원가입 페이지
       // ignore: curly_braces_in_flow_control_structures
       return Scaffold(
-        appBar: AppBar(
-            title: _title(),
-        ),
         body: Container(
           height: double.infinity,
           width: double.infinity,
@@ -145,6 +147,7 @@ class _LoginPageState extends State<LoginPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              _title(),
               _entryField('email', _controllerEmail),
               _entryField('password', _controllerPassword),
               _entryField('이름', _controllername),
