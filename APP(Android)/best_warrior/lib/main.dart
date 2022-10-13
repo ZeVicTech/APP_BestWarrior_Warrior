@@ -1,3 +1,4 @@
+import 'package:best_warrior/pages/login_page.dart';
 import 'package:best_warrior/pages/manager_page.dart';
 import 'package:best_warrior/pages/profile_page.dart';
 import 'package:best_warrior/theme.dart';
@@ -22,6 +23,6 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: theme(),
         //home: const WidgetTree());
-        home: ManagerPage());
+        home: WidgetTree());
   }
 }

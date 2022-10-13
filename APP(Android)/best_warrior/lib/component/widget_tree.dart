@@ -1,6 +1,7 @@
 import 'package:best_warrior/component/auth.dart';
 import 'package:best_warrior/pages/home_page.dart';
 import 'package:best_warrior/pages/login_page.dart';
+import 'package:best_warrior/pages/main_page.dart';
 import 'package:flutter/material.dart';
 
 class WidgetTree extends StatefulWidget {
@@ -17,7 +18,7 @@ class _WidgetTreeState extends State<WidgetTree> {
       stream: Auth().authStateChanges,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          return HomePage();
+          return MainPage();
         } else {
           return const LoginPage();
         }
