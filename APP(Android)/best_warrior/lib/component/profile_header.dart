@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/widgets.dart';
+import 'package:firebase_database/firebase_database.dart';
 
 class ProfileHeader extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -27,14 +29,16 @@ class ProfileHeader extends StatelessWidget {
         ));
   }
 
+
+
   Widget _buildHeaderProfile() {
     return Column(
       // ignore: prefer_const_literals_to_create_immutables
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          '이준영',
-          style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
+          '2탄약중대/상병',
+          style: TextStyle(fontSize: 20),
         ),
         Text(
           '2탄약중대/상병',
