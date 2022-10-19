@@ -1,3 +1,4 @@
+import 'package:best_warrior/component/room.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -50,33 +51,29 @@ class _ProfileTabState extends State<ProfileTab>
         ListView(
           scrollDirection: Axis.vertical,
           children: [
-            Container(
-              color: Colors.red,
-              height: 50,
-              child: Text(
-                'A',
-                textAlign: TextAlign.center,
-              ),
-            ),
-            Container(
-              color: Colors.blue,
-              height: 50,
-              child: Text(
-                'A',
-                textAlign: TextAlign.center,
-              ),
-            ),
-            Container(
-              color: Colors.green,
-              height: 50,
-              child: Text(
-                'A',
-                textAlign: TextAlign.center,
-              ),
-            ),
+            Room(),
+            Room(),
+            Room(),
+            Room(),
+            Room(),
+            Room(),
+            Room(),
+            Room(),
           ],
         ),
-        Container(color: Colors.black,)
+        ListView(
+          scrollDirection: Axis.vertical,
+          children: [
+            Room(),
+            Room(),
+            Room(),
+            Room(),
+            Room(),
+            Room(),
+            Room(),
+            Room(),
+          ],
+        ),
       ],
     );
   }
