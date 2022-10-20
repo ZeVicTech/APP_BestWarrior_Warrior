@@ -15,20 +15,13 @@ class User {
     return snapshot.value.toString();
   }
 
-  Future<int> setuser() async {
+  Future<List> userinfo() async {
     var a = await getuser();
     var g = a
-        .toString()
-        .replaceAll(RegExp("{|}|계급: |군번: |마일리지: |소속부대: |이름: |특급만든횟수"), "");
+        .replaceAll(RegExp("{|} |계급: |군번: |마일리지: |소속부대: |이름: |특급만든횟수"), "");
     g.trim();
-    var l = g.split(',');
-    userclasses = l[0];
-    usernumber = int.parse(l[1]);
-    mileage = int.parse(l[2]);
-    userarmy = l[3];
-    username = l[4];
-    make = int.parse(l[5]);
-    return 0;
+    var userinfo = g.split(',');
+    return userinfo;
   }
 
 //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
@@ -63,7 +56,7 @@ class User {
 */
   Widget _getname() {
     return FutureBuilder(
-        future: setuser(),
+        future: userinfo(),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           //해당 부분은 data를 아직 받아 오지 못했을 때 실행되는 부분
           if (snapshot.hasData == false) {
