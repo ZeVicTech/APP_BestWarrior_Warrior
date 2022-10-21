@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../component/auth.dart';
 import 'package:firebase_database/firebase_database.dart';
-import 'package:flutter/material.dart';
 
 //로그인 페이지
 class LoginPage extends StatefulWidget {
@@ -18,8 +17,7 @@ class _LoginPageState extends State<LoginPage> {
   bool isLogin = true;
 
   final TextEditingController _controllerEmail = TextEditingController(); //이메일
-  final TextEditingController _controllerPassword =
-      TextEditingController(); //비밀번호
+  final TextEditingController _controllerPassword = TextEditingController(); //비밀번호
   final TextEditingController _controllername = TextEditingController(); //이름
   final TextEditingController _controllerarmy = TextEditingController(); //소속부대
   final TextEditingController _controllerclasses = TextEditingController(); //계급
@@ -53,10 +51,12 @@ class _LoginPageState extends State<LoginPage> {
     //여기에 실시간 데이터베이스 저장
     await ref.set({
       _controllername.text: {
-        "이름:": _controllername.text,
+        "이름": _controllername.text,
         "소속부대": _controllerarmy.text,
         "계급": _controllerclasses.text,
         "군번": _controllernumber.text,
+        "마일리지":0,
+        "특급만든횟수":0
       }
     });
   }

@@ -1,13 +1,12 @@
 import 'package:best_warrior/component/profile_grade_info.dart';
 import 'package:best_warrior/component/profile_tab.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
-
 import '../component/profile_header.dart';
+import '../component/User.dart';
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,11 +17,11 @@ class ProfilePage extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(height: 20),
-            ProfileHeader(),
-            SizedBox(height: 20),
-            profileGradeInfo(),
-            SizedBox(height: 20),
-            Expanded(child:ProfileTab()),
+          ProfileHeader(),
+          SizedBox(height: 20),
+          profileGradeInfo(),
+          SizedBox(height: 20),
+          Expanded(child: ProfileTab()),
         ],
       ),
     );
