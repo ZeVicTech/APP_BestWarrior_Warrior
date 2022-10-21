@@ -14,7 +14,7 @@ class Room extends StatelessWidget {
       ),
       color: Colors.green,
       margin: EdgeInsets.all(10),
-      height: 50,
+      height: 60,
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Text(
           '방 제목',
@@ -34,8 +34,8 @@ class Room extends StatelessWidget {
   Widget _buildLine() {
     return Container(
       color: Colors.black,
-      width: 2,
-      height: 50,
+      width: 1,
+      height: 15,
     );
   }
 }
