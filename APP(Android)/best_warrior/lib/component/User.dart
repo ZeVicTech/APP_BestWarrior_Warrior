@@ -23,7 +23,7 @@ class User {
     var userinfo = g.split(',');
     return userinfo;
   }
-
+//FlutterAnimatedList 목록들 정렬
 //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 //future builder 예시
 
