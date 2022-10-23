@@ -24,14 +24,14 @@ class MeetingroomPage extends StatelessWidget {
         children: [
           SizedBox(height: 20),
           Meet_Header(),
-          SizedBox(height: 20),
+          SizedBox(height: 10),
           Meet_Header().meet_calendar(),    //달력
           Row(
             mainAxisAlignment:  MainAxisAlignment.spaceEvenly,
             children: [
               SizedBox(width: 20),
               Meet_Header().meet_join(),      //신청하기 버튼
-              Meet_Header().meet_chat(),  //채팅 버튼    
+              Meet_Header().meet_chat(context),  //채팅 버튼    
             ],
           )
           ],

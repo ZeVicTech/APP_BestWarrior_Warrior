@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/container.dart';
+import 'package:provider/provider.dart';
+import 'package:uuid/uuid.dart';
+import '../pages/chatting_page.dart';
 import '../pages/profile_page.dart';
 import 'package:table_calendar/table_calendar.dart';
+
+import 'chatting_provider.dart';
 
 class Meet_Header extends StatelessWidget {
   const Meet_Header({super.key});
@@ -67,11 +72,19 @@ class Meet_Header extends StatelessWidget {
     );
   }
 
-  Widget meet_chat() {
+  Widget meet_chat(context) {
     return IconButton(
       icon: Icon(Icons.chat),
       color: Color.fromARGB(255, 0, 0, 0),
-      onPressed: () {}
+      onPressed: () {
+         var u = Uuid().v1();
+
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => ChangeNotifierProvider(
+                          create: (context) => ChattingProvider(u, "엄득용"),   //유저 이름 들어갈곳
+                          child: ChattingPage(),
+                        )));
+      }
     );
   }
 }
