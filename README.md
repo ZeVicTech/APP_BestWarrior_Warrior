@@ -1,11 +1,5 @@
-### 본 페이지는 샘플입니다. 아래의 *[샘플 양식에 포함되어 있는 항목은 필수 기재사항]*   입니다.
-해당 내용은 모두 예시이며 설명이 부족하거나 추가하고싶은 부분이 있으면 개발자님이 추가해서 작성하셔도 무관합니다. (동영상, 이미지, 텍스트 적용 전부 자유)
-
-
 # BEST_WARRIORR
 ![Logo](https://logosbynick.com/wp-content/uploads/2018/03/final-logo-example.png)
-
-프로젝트명 또는 프로젝트 로고 이미지 **(택1)**
 
 ## 프로잭트 소개
 특급전사를 달성을 위한 소모임 앱
@@ -21,19 +15,26 @@
 ### 순위표 확인
 
 ## 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
-* ECMAScript 6 지원 브라우저 사용
-* 권장: Google Chrome 버젼 77 이상
+* sdk: '>=2.18.1 <3.0.0'sdk: '>=2.18.1 <3.0.0'
+* dependencies:
+  cupertino_icons: ^1.0.4
+  firebase_core: ^1.24.0
+  firebase_auth: ^3.11.1
+  firebase_database: ^9.1.7
+  font_awesome_flutter: ^9.0.0
+  intl: ^0.17.0
+  table_calendar: ^3.0.6
+  provider: ^6.0.4
+  cloud_firestore: ^3.5.1
+  uuid: ^3.0.1
 
 ## 기술 스택 (Technique Used) 
 ### Server(back-end)
- -  nodejs, php, java 등 서버 언어 버전 
- - express, laravel, sptring boot 등 사용한 프레임워크 
- - DB 등 사용한 다른 프로그램 
+-Firebase
  
 ### Front-end
- -  react.js, vue.js 등 사용한 front-end 프레임워크 
- -  UI framework
- - 기타 사용한 라이브러리
+-Flutter 
+-Dart
 
 ## 설치 안내 (Installation Process)
 ```bash
@@ -53,8 +54,8 @@ $ yarn start or npm run start
  샘플 에디터 [https://stackedit.io/app#](https://stackedit.io/app#)
  
 ## 팀 정보 (Team Information)
-- hong gil dong (hong999@gmail.com), Github Id: gildong999
-- kim su ji (suji999@gmail.com), Github Id: suji999
+- kim yeong seung  (ksy980501@gmail.com), Github Id: ZeVicTech
+- Eom deuk yong (emrdyd664@gmail.com), Github Id: umdeukyong
 
 ## 저작권 및 사용권 정보 (Copyleft / End User License)
  * [MIT](https://github.com/osam2020-WEB/Sample-ProjectName-TeamName/blob/master/license.md)
