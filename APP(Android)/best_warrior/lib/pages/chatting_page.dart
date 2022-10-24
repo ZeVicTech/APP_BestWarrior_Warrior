@@ -45,7 +45,7 @@ class _ChattingPageState extends State<ChattingPage> {
     var p = Provider.of<ChattingProvider>(context);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.grey[900],
+        title:Text("채팅"),
         leading: GestureDetector(
             onTap: () {
               Navigator.of(context).pop();

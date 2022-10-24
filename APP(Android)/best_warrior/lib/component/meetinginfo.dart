@@ -6,7 +6,6 @@ import 'package:uuid/uuid.dart';
 import '../pages/chatting_page.dart';
 import '../pages/profile_page.dart';
 import 'package:table_calendar/table_calendar.dart';
-
 import 'chatting_provider.dart';
 
 class Meet_Header extends StatelessWidget {
