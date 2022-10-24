@@ -59,9 +59,34 @@ class Meet_Header extends StatelessWidget {
         focusedDay: DateTime.now());
   }
 
-  Widget meet_join() {
+  Widget meet_join(context) {
     return ElevatedButton.icon(
-      onPressed: () {},
+      onPressed: () {
+        showDialog(
+          context: context,
+          barrierDismissible: true, // 바깥 영역 터치시 닫을지 여부
+          builder: (BuildContext context) {
+            return AlertDialog(
+              content: Text('이 소모임에 가입 신청하시겠습니까?'),
+              insetPadding: const EdgeInsets.fromLTRB(0, 80, 0, 80),
+              actions: [
+                TextButton(
+                  child: const Text('Cancel'),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                ),  
+                TextButton(
+                  child: const Text('확인'),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },  
+                ),
+              ],
+            );
+          }
+        );
+      },
       label: Text("신청하기"),
       icon: Icon(Icons.add),
       style: ElevatedButton.styleFrom(

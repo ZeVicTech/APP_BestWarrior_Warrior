@@ -30,7 +30,7 @@ class MeetingroomPage extends StatelessWidget {
             mainAxisAlignment:  MainAxisAlignment.spaceEvenly,
             children: [
               SizedBox(width: 20),
-              Meet_Header().meet_join(),      //신청하기 버튼
+              Meet_Header().meet_join(context),      //신청하기 버튼
               Meet_Header().meet_chat(context),  //채팅 버튼    
             ],
           )
