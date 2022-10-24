@@ -8,6 +8,7 @@ import 'User.dart';
 
 class ProfileHeader extends StatelessWidget {
   User user = User();
+  
   @override
   Widget build(BuildContext context) {
     return Row(

@@ -46,6 +46,7 @@ class _ChattingPageState extends State<ChattingPage> {
     return Scaffold(
       appBar: AppBar(
         title:Text("채팅"),
+        centerTitle: true,
         leading: GestureDetector(
             onTap: () {
               Navigator.of(context).pop();
