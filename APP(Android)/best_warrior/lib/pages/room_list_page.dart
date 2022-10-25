@@ -1,3 +1,4 @@
+import 'package:best_warrior/component/room.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -12,40 +13,61 @@ class RoomListPage extends StatefulWidget {
 }
 
 class _RoomListPageState extends State<RoomListPage> {
-
   int? selectedIndex;
   List<Tech> _chipsList = [
-    Tech("Android", Colors.green),
-    Tech("Flutter", Colors.blueGrey),
-    Tech("Ios", Colors.deepOrange),
-    Tech("Python", Colors.cyan),
-    Tech("Go lang", Colors.yellow)
+    Tech("주특기", Colors.green),
+    Tech("화생방", Colors.blueGrey),
+    Tech("경계", Colors.deepOrange),
+    Tech("정신전력", Colors.cyan),
+    Tech("개인화기", Colors.yellow),
+    Tech("체력", Color.fromARGB(255, 238, 30, 186))
+  ];
+
+  List<Room> _roomList = [
+    Room('사격특급의 길', '개인화기', '주경성', 1),
+    Room('체력 왕', '체력', '이정호', 1),
+    Room('방 제목', '병기본 과목', '멘토 이름', 1),
+    Room('방 제목', '병기본 과목', '멘토 이름', 1),
+    Room('방 제목', '병기본 과목', '멘토 이름', 1),
+    Room('방 제목', '병기본 과목', '멘토 이름', 1),
+    Room('방 제목', '병기본 과목', '멘토 이름', 1),
+    Room('방 제목', '병기본 과목', '멘토 이름', 1),
+    Room('방 제목', '병기본 과목', '멘토 이름', 1),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      alignment: Alignment.center,
-      child: Wrap(
-        spacing: 6,
-        direction: Axis.horizontal,
-        children: techChips(),
-      )
-    );
+        alignment: Alignment.center,
+        child: Column(
+          children: [
+            Container(height: 50,
+              child: Wrap(
+                spacing: 6,
+                direction: Axis.horizontal,
+                children: techChips(),
+              ),
+            ),
+            Expanded(
+              child:ListView(
+                children: _roomList,
+              ),
+            ),
+          ],
+        ));
   }
 
-  List<Widget> techChips () {
+  List<Widget> techChips() {
     List<Widget> chips = [];
-    for (int i=0; i< _chipsList.length; i++) {
+    for (int i = 0; i < _chipsList.length; i++) {
       Widget item = Padding(
-        padding: const EdgeInsets.only(left:10, right: 5),
+        padding: const EdgeInsets.only(left: 10, right: 5),
         child: ChoiceChip(
           label: Text(_chipsList[i].label),
           labelStyle: TextStyle(color: Colors.white),
           backgroundColor: _chipsList[i].color,
           selected: selectedIndex == i,
-          onSelected: (bool value)
-          {
+          onSelected: (bool value) {
             setState(() {
               selectedIndex = i;
             });
@@ -58,11 +80,8 @@ class _RoomListPageState extends State<RoomListPage> {
   }
 }
 
-class Tech
-{
+class Tech {
   String label;
   Color color;
   Tech(this.label, this.color);
 }
-
-
