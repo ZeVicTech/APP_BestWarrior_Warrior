@@ -37,7 +37,6 @@ class ChattingItem extends StatelessWidget {
                 child: Text(
                   chattingModel.text, style: TextStyle(color: Colors.white, fontSize: 18),),
               )
-
             ],
           )
         ],

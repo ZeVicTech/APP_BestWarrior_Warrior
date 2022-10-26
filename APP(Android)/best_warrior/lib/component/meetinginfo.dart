@@ -61,7 +61,7 @@ class Meet_Header extends StatelessWidget {
 
   Widget meet_join(context) {
     return ElevatedButton.icon(
-      onPressed: () {
+      onPressed: () {      
         showDialog(
           context: context,
           barrierDismissible: true, // 바깥 영역 터치시 닫을지 여부
@@ -131,5 +131,110 @@ class Meet_Header extends StatelessWidget {
                 });
           }
         });
+  }
+
+  Widget mentorinfo() {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+      Text(
+        "멘토정보",
+        textAlign: TextAlign.center,
+      ),
+      SizedBox(height: 5),
+      Row(children: [
+        SizedBox(
+            width: 100,
+            height: 100,
+            child: CircleAvatar(
+              backgroundImage: AssetImage("assets/soldier.jpg"),
+            )),
+        SizedBox(width: 20),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "병장 엄득용",
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
+            ),
+            Text(
+              "특급만든횟수:100",
+              style: TextStyle(fontSize: 15),
+            ),
+            Text(
+              "특기:체육",
+              style: TextStyle(fontSize: 15),
+            ),
+          ],
+        ),
+      ]),
+      SizedBox(height: 5),
+      DataTable(
+          border: TableBorder.all(color: Color.fromARGB(255, 0, 0, 0)),
+          columnSpacing: 10,
+          horizontalMargin: 10,
+          dataRowHeight: 20,
+          dataTextStyle:
+              TextStyle(fontSize: 10, color: Color.fromARGB(255, 0, 0, 0)),
+          headingRowHeight: 20,
+          headingTextStyle:
+              TextStyle(fontSize: 10, color: Color.fromARGB(255, 0, 0, 0)),
+          columns: [
+            DataColumn(label: Text('주특기')),
+            DataColumn(label: Text('정신전력')),
+            DataColumn(label: Text('화생방')),
+            DataColumn(label: Text('경계')),
+            DataColumn(label: Text('개인화기')),
+            DataColumn(label: Text('체력'))
+          ],
+          rows: [
+            DataRow(cells: [
+              DataCell(Text('특급')),
+              DataCell(Text('특급')),
+              DataCell(Text('특급')),
+              DataCell(Text('특급')),
+              DataCell(Text('특급')),
+              DataCell(Text('특급'))
+            ])
+          ]),
+      SizedBox(height: 5),
+      Text("멘티들의 리뷰"),
+      meet_item(),
+      meet_item(),
+      meet_item()
+    ]);
+  }
+  Widget meet_item(){
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 6),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(height: 3),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 13),
+                child: Text("김영승", style: TextStyle(fontSize: 12),),
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 5),
+                padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
+                decoration: BoxDecoration(
+                    color: Colors.grey[800],
+                    borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(30),
+                    bottomLeft: Radius.circular(0),
+                bottomRight: Radius.circular(30))),
+                child: Text(
+                  "너무 좋아용", style: TextStyle(color: Colors.white, fontSize: 12)),
+              )
+            ]
+          )
+        ]
+      )
+    );
   }
 }
