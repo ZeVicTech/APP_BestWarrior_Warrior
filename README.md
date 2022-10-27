@@ -7,12 +7,13 @@
 
 
 ## 기능 설명
-### 회원가입
-자신의 부대명과 계급, 군번, 이름등의 정보를 입력하여 회원가입을 진행합니다.
+### 모임 일정 관리
+### 모임 채팅
+### 분야별 모임 검색
+### 마일리지
+### 멘토 리뷰 
+### 순위표
 
-### 소모임 가입
-### 소모임 생성
-### 순위표 확인
 
 ## 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
 * sdk: '>=2.18.1 <3.0.0'sdk: '>=2.18.1 <3.0.0'
@@ -44,7 +45,11 @@ $ yarn start or npm run start
 ```
 
 ## 프로젝트 사용법 (Getting Started)
- 
+
+## 프로젝트 관리
+* [Pigma](https://www.figma.com/file/hkQDxDwJb9ALVmcVLKTr04/%EB%B2%A0%EC%8A%A4%ED%8A%B8%EC%9B%8C%EB%A6%AC%EC%96%B4?node-id=0%3A1)
+* [Git Projects Board](https://github.com/orgs/osamhack2022-v2/projects/6/views/1)
+
 ## 팀 정보 (Team Information)
 - kim yeong seung  (ksy980501@gmail.com), Github Id: ZeVicTech
 - Eom deuk yong (emrdyd664@gmail.com), Github Id: umdeukyong
