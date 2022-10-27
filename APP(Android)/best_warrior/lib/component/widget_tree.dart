@@ -22,7 +22,7 @@ class _WidgetTreeState extends State<WidgetTree> {
       stream: Auth().authStateChanges,
       builder: (context, snapshot) {
         if (snapshot.hasData) { 
-          return MeetingroomPage();
+          return MainPage();
         } else {
           return const LoginPage();
         }

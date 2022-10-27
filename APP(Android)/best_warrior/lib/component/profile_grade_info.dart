@@ -6,45 +6,33 @@ import 'package:flutter/widgets.dart';
 class profileGradeInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        _buildInfo('주특기', '특급'),
-        _buildLine(),
-        _buildInfo('화생방', '특급'),
-        _buildLine(),
-        _buildInfo('경계', '특급'),
-        _buildLine(),
-        _buildInfo('정신전력', '특급'),
-        _buildLine(),
-        _buildInfo('개인화기', '특급'),
-        _buildLine(),
-        _buildInfo('체력', '특급'),
-      ],
-    );
-  }
-
-  Widget _buildInfo(String title, String grade) {
-    return Column(
-      children: [
-        Text(
-          title,
-          style: TextStyle(fontSize: 15),
-        ),
-        SizedBox(height: 2),
-        Text(
-          grade,
-          style: TextStyle(fontSize: 15),
-        )
-      ],
-    );
-  }
-
-  Widget _buildLine() {
-    return Container(
-      color: Colors.black,
-      width: 2,
-      height: 50,
-    );
+    return DataTable(
+          border: TableBorder.all(color: Color.fromARGB(255, 0, 0, 0)),
+          columnSpacing: 10,
+          horizontalMargin: 10,
+          dataRowHeight: 30,
+          dataTextStyle:
+              TextStyle(fontSize: 16, color: Color.fromARGB(255, 0, 0, 0)),
+          headingRowHeight: 30,
+          headingTextStyle:
+              TextStyle(fontSize: 16, color: Color.fromARGB(255, 0, 0, 0)),
+          columns: [
+            DataColumn(label: Text('주특기')),
+            DataColumn(label: Text('정신전력')),
+            DataColumn(label: Text('화생방')),
+            DataColumn(label: Text('경계')),
+            DataColumn(label: Text('개인화기')),
+            DataColumn(label: Text('체력'))
+          ],
+          rows: [
+            DataRow(cells: [
+              DataCell(Text('특급')),
+              DataCell(Text('특급')),
+              DataCell(Text('특급')),
+              DataCell(Text('특급')),
+              DataCell(Text('특급')),
+              DataCell(Text('특급'))
+            ])
+          ]);
   }
 }

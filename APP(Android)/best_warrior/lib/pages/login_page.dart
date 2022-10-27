@@ -64,11 +64,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget _title() {
     return Column(
       children: [
-        Icon(
-          CupertinoIcons.flame,
-          color: Colors.deepOrangeAccent[400],
-          size: 200,
-        ),
+        Image.asset("assets/best_warrior-logo.png"),
         Text(
           '베스트 워리어',
           style: TextStyle(fontSize: 40),
