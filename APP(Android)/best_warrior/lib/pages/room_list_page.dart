@@ -13,7 +13,7 @@ class RoomListPage extends StatefulWidget {
 }
 
 class _RoomListPageState extends State<RoomListPage> {
-  int selectedIndex = 0;//전체방을 보기위한 인덱스
+  int selectedIndex = -1;//전체방을 보기위한 인덱스
   List<Tech> _chipsList = [
     Tech("전체", Colors.black), //과목코드 0
     Tech("주특기", Colors.green), //과목코드 0
