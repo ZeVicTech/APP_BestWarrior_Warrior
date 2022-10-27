@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import '../component/calender.dart';
 import '../component/meetinginfo.dart';
 import '../pages/profile_page.dart';
 
@@ -25,7 +26,7 @@ class MeetingroomPage extends StatelessWidget {
           SizedBox(height: 20),
           Meet_Header(),
           SizedBox(height: 10),
-          Meet_Header().meet_calendar(),    //달력
+          Calendar(),    //달력
           Row(
             mainAxisAlignment:  MainAxisAlignment.spaceEvenly,
             children: [
