@@ -15,46 +15,52 @@ class RoomListPage extends StatefulWidget {
 class _RoomListPageState extends State<RoomListPage> {
   int? selectedIndex;
   List<Tech> _chipsList = [
-    Tech("주특기", Colors.green),
-    Tech("화생방", Colors.blueGrey),
-    Tech("경계", Colors.deepOrange),
-    Tech("정신전력", Colors.cyan),
-    Tech("개인화기", Colors.yellow),
-    Tech("체력", Color.fromARGB(255, 238, 30, 186))
+    Tech("주특기", Colors.green),//과목코드 1
+    Tech("화생방", Colors.blueGrey),//과목코드 2
+    Tech("경계", Colors.deepOrange),//과목코드 3
+    Tech("정신전력", Colors.cyan),//과목코드 4
+    Tech("개인화기", Colors.yellow),//과목코드 5
+    Tech("체력", Color.fromARGB(255, 238, 30, 186))//과목코드 6
   ];
 
   List<Room> _roomList = [
     Room('사격특급의 길', '개인화기', '주경성', 1),
     Room('체력 왕', '체력', '이정호', 1),
+    Room('방 제목', '병기본 과목', '멘토 이름', 2),
+    Room('방 제목', '병기본 과목', '멘토 이름', 3),
+    Room('방 제목', '병기본 과목', '멘토 이름', 4),
+    Room('방 제목', '병기본 과목', '멘토 이름', 5),
+    Room('방 제목', '병기본 과목', '멘토 이름', 6),
     Room('방 제목', '병기본 과목', '멘토 이름', 1),
-    Room('방 제목', '병기본 과목', '멘토 이름', 1),
-    Room('방 제목', '병기본 과목', '멘토 이름', 1),
-    Room('방 제목', '병기본 과목', '멘토 이름', 1),
-    Room('방 제목', '병기본 과목', '멘토 이름', 1),
-    Room('방 제목', '병기본 과목', '멘토 이름', 1),
-    Room('방 제목', '병기본 과목', '멘토 이름', 1),
+    Room('방 제목', '병기본 과목', '멘토 이름', 2),
   ];
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        alignment: Alignment.center,
-        child: Column(
-          children: [
-            Container(height: 50,
-              child: Wrap(
-                spacing: 6,
-                direction: Axis.horizontal,
-                children: techChips(),
-              ),
-            ),
-            Expanded(
-              child:ListView(
-                children: _roomList,
-              ),
-            ),
-          ],
-        ));
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('소모임 리스트'),
+          centerTitle: true,
+        ),
+        body: Container(
+            alignment: Alignment.center,
+            child: Column(
+              children: [
+                Container(
+                  height: 100,
+                  child: Wrap(
+                    spacing: 6,
+                    direction: Axis.horizontal,
+                    children: techChips(),
+                  ),
+                ),
+                Expanded(
+                  child: ListView(
+                    children: _roomList,
+                  ),
+                ),
+              ],
+            )));
   }
 
   List<Widget> techChips() {
