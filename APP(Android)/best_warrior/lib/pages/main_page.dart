@@ -1,3 +1,4 @@
+import 'package:best_warrior/pages/meetingroom_page.dart';
 import 'package:best_warrior/pages/profile_page.dart';
 import 'package:best_warrior/pages/ranking_page.dart';
 import 'package:best_warrior/pages/room_list_page.dart';
@@ -24,7 +25,7 @@ class _MainPageState extends State<MainPage> {
         children: [
           ProfilePage(),
           RoomListPage(),
-          RankingPage(),
+          RankingPage()
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

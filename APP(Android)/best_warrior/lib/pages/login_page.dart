@@ -42,15 +42,10 @@ class _LoginPageState extends State<LoginPage> {
       await Auth().createUserWithEmailAndPassword(
         email: _controllerEmail.text,
         password: _controllerPassword.text,
+        
       );
-    } on FirebaseAuthException catch (e) {
-      setState(() {
-        errorMessage = e.message;
-      });
-    }
-    //여기에 실시간 데이터베이스 저장
-    await ref.set({
-      _controllername.text: {
+      await ref.set({
+      "${FirebaseAuth.instance.currentUser?.uid}": {
         "이름": _controllername.text,
         "소속부대": _controllerarmy.text,
         "계급": _controllerclasses.text,
@@ -59,16 +54,17 @@ class _LoginPageState extends State<LoginPage> {
         "특급만든횟수":0
       }
     });
+    } on FirebaseAuthException catch (e) {
+      setState(() {
+        errorMessage = e.message;
+      });
+    }
   }
 
   Widget _title() {
     return Column(
       children: [
-        Icon(
-          CupertinoIcons.flame,
-          color: Colors.deepOrangeAccent[400],
-          size: 200,
-        ),
+        Image.asset("assets/best_warrior-logo.png"),
         Text(
           '베스트 워리어',
           style: TextStyle(fontSize: 40),

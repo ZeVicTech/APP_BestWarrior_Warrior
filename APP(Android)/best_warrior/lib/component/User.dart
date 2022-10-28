@@ -1,17 +1,13 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 
 class User {
-  late String userclasses; //계급
-  late int usernumber; //군번
-  late int mileage; //마일리지
-  late String userarmy; //소속부대
-  late String username; //이름
-  late int make; //특급만든횟수
+  DatabaseReference ref = FirebaseDatabase.instance.ref("USER");
 
   Future<String> getuser() async {
     final ref = FirebaseDatabase.instance.ref();
-    final snapshot = await ref.child('USER/엄득용').get();
+    final snapshot = await ref.child('USER/${FirebaseAuth.instance.currentUser?.uid}').get();
     return snapshot.value.toString();
   }
 
