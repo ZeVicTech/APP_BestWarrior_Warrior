@@ -44,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
         password: _controllerPassword.text,
         
       );
-      await ref.update({
+      await ref.set({
       "${FirebaseAuth.instance.currentUser?.uid}": {
         "이름": _controllername.text,
         "소속부대": _controllerarmy.text,

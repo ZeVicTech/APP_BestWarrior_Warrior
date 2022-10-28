@@ -67,7 +67,7 @@ $ yarn start or npm run start
 * [Git Projects Board](https://github.com/orgs/osamhack2022-v2/projects/6/views/1)
 
 ## 팀 정보 (Team Information)
-- kim yeong seung  (ksy980501@gmail.com), Github Id: ZeVicTech
+- Kim yeong seung  (ksy980501@gmail.com), Github Id: ZeVicTech
 - Eom deuk yong (emrdyd664@gmail.com), Github Id: umdeukyong
 
 ## 저작권 및 사용권 정보 (Copyleft / End User License)
