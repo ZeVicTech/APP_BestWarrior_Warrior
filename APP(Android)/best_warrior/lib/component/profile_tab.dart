@@ -33,7 +33,7 @@ class _ProfileTabState extends State<ProfileTab>
   Widget _buildTabBar() {
     return TabBar(
       controller: _tabController,
-      labelColor: Colors.yellow,
+      labelColor: Color.fromARGB(255, 0, 0, 0),
       indicatorColor: Colors.black,
       tabs: [
         Tab(
@@ -50,36 +50,29 @@ class _ProfileTabState extends State<ProfileTab>
       children: [
         ListView(
           scrollDirection: Axis.vertical,
-          children: [
-            Room('방 제목','병기본 과목','멘토 이름',1),
-            Room('방 제목','병기본 과목','멘토 이름',1),
-            Room('방 제목','병기본 과목','멘토 이름',1),
-            Room('방 제목','병기본 과목','멘토 이름',1),
-            Room('방 제목','병기본 과목','멘토 이름',1),
-            Room('방 제목','병기본 과목','멘토 이름',1),
-            Room('방 제목','병기본 과목','멘토 이름',1),
-            Room('방 제목','병기본 과목','멘토 이름',1),
-            Room('방 제목','병기본 과목','멘토 이름',1),
-            Room('방 제목','병기본 과목','멘토 이름',1),
-          ],
+          children: 
+            _roomList
+          ,
         ),
         ListView(
           scrollDirection: Axis.vertical,
-          children: [
-            Room('방 제목','병기본 과목','멘토 이름',1),
-            Room('방 제목','병기본 과목','멘토 이름',1),
-            Room('방 제목','병기본 과목','멘토 이름',1),
-            Room('방 제목','병기본 과목','멘토 이름',1),
-            Room('방 제목','병기본 과목','멘토 이름',1),
-            Room('방 제목','병기본 과목','멘토 이름',1),
-            Room('방 제목','병기본 과목','멘토 이름',1),
-            Room('방 제목','병기본 과목','멘토 이름',1),
-            Room('방 제목','병기본 과목','멘토 이름',1),
-            Room('방 제목','병기본 과목','멘토 이름',1),
-            Room('방 제목','병기본 과목','멘토 이름',1),
-          ],
+          children: _roomList,
         ),
       ],
     );
   }
+
+  List<Widget> _roomList = [
+    Room('주특기의 왕도', '주특기', '주경성', 0),
+    Room('가스! 가스! 가스!', '화생방', '이정호', 1),
+    Room('초병의 권한 맛좀 볼래', '경계', '멘토 이름', 2),
+    Room('정신무장', '정신전력', '멘토 이름', 3),
+    Room('사격 만발의 길', '개인화기', '멘토 이름', 4),
+    Room('몸만들면서 특급까지', '체력', '멘토 이름', 5),
+    Room('주특기 족집게 과외', '주특기', '멘토 이름', 0),
+    Room('방독면 5초컷', '화생방', '멘토 이름', 1),
+    Room('경계의 신', '경계', '멘토 이름', 2),
+  ];
+
+  
 }

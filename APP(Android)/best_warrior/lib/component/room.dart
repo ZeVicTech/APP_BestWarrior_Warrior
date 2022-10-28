@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:best_warrior/component/meetinginfo.dart';
 
 class Room extends StatelessWidget {
   String _name = '방 제목';
@@ -12,63 +13,107 @@ class Room extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        //color: setColor(),
-        border: Border.all(
-          width: 3,
-          color: setColor(),
-        ),
-      ),
-      margin: EdgeInsets.all(7),
-      height: 70,
-      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Text(
-          _name,
-          style: TextStyle(
-            fontSize: 30,
-            //color: Colors.white,
-            color: Colors.black,
+    return InkWell(child:
+      Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          //color: setColor(),
+          border: Border.all(
+            width: 3,
+            color: setColor(),
           ),
         ),
-        Row(
+        margin: EdgeInsets.all(7),
+        padding: EdgeInsets.all(3),
+        height: 70,
+        child: Row(
           children: [
-            Text(_subject,
+            Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Text(
+                _name,
                 style: TextStyle(
-                  fontSize: 15,
+                  fontSize: 30,
                   //color: Colors.white,
                   color: Colors.black,
-                )),
-            _buildLine(),
-            Text(_mentor,
-                style: TextStyle(
-                  fontSize: 15,
-                  //color: Colors.white,
-                  color: Colors.black,
-                )),
+                ),
+              ),
+              Row(
+                children: [
+                  Text(_subject,
+                      style: TextStyle(
+                        fontSize: 15,
+                        //color: Colors.white,
+                        color: Colors.black,
+                      )),
+                  SizedBox(
+                    width: 3,
+                  ),
+                  _buildLine(),
+                  SizedBox(
+                    width: 3,
+                  ),
+                  Text(_mentor,
+                      style: TextStyle(
+                        fontSize: 15,
+                        //color: Colors.white,
+                        color: Colors.black,
+                      )),
+                  SizedBox(width: 30),
+                  IconButton(
+                      onPressed: () {
+                        showDialog(
+                            context: context,
+                            barrierDismissible: true, // 바깥 영역 터치시 닫을지 여부
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                content: Meet_Header().mentorinfo(),
+                                insetPadding:
+                                    const EdgeInsets.fromLTRB(0, 80, 0, 80),
+                                actions: [
+                                  TextButton(
+                                    child: const Text('Cancel'),
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                  ),
+                                  TextButton(
+                                    child: const Text('확인'),
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                  ),
+                                ],
+                              );
+                            });
+                      },
+                      icon: Icon(Icons.face))
+                ],
+              ),
+            ]),
           ],
         ),
-      ]),
+      ),
     );
   }
 
   Color setColor() {
     switch (subjectCode) {
       case 0:
-        return Colors.green;
+        return Colors.black;
       case 1:
-        return Colors.blueGrey;
+        return Colors.green;
       case 2:
-        return Colors.deepOrange;
+        return Colors.blueGrey;
       case 3:
-        return Colors.cyan;
+        return Colors.deepOrange;
       case 4:
-        return Colors.yellow;
+        return Colors.cyan;
       case 5:
-        return Color.fromARGB(255, 238, 30, 186);
-      default:
+        return Colors.yellow;
+      case 6:
         return Color.fromARGB(255, 231, 24, 24);
+      default:
+        return Colors.green;
     }
   }
 
