@@ -1,3 +1,4 @@
+import 'package:best_warrior/pages/meetingroom_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -13,8 +14,8 @@ class Room extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(child:
-      Container(
+    return InkWell(
+      child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           //color: setColor(),
@@ -27,6 +28,7 @@ class Room extends StatelessWidget {
         padding: EdgeInsets.all(3),
         height: 70,
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Text(
@@ -58,41 +60,40 @@ class Room extends StatelessWidget {
                         //color: Colors.white,
                         color: Colors.black,
                       )),
-                  SizedBox(width: 30),
-                  IconButton(
-                      onPressed: () {
-                        showDialog(
-                            context: context,
-                            barrierDismissible: true, // 바깥 영역 터치시 닫을지 여부
-                            builder: (BuildContext context) {
-                              return AlertDialog(
-                                content: Meet_Header().mentorinfo(),
-                                insetPadding:
-                                    const EdgeInsets.fromLTRB(0, 80, 0, 80),
-                                actions: [
-                                  TextButton(
-                                    child: const Text('Cancel'),
-                                    onPressed: () {
-                                      Navigator.of(context).pop();
-                                    },
-                                  ),
-                                  TextButton(
-                                    child: const Text('확인'),
-                                    onPressed: () {
-                                      Navigator.of(context).pop();
-                                    },
-                                  ),
-                                ],
-                              );
-                            });
-                      },
-                      icon: Icon(Icons.face))
                 ],
               ),
             ]),
+            SizedBox(width: 30),
+            IconButton(
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      barrierDismissible: true, // 바깥 영역 터치시 닫을지 여부
+                      builder: (BuildContext context) {
+                        return AlertDialog(
+                          content: Meet_Header().mentorinfo(),
+                          insetPadding: const EdgeInsets.fromLTRB(0, 80, 0, 80),
+                          actions: [
+                            TextButton(
+                              child: const Text('확인'),
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                            ),
+                          ],
+                        );
+                      });
+                },
+                icon: Icon(Icons.face))
           ],
         ),
       ),
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => MeetingroomPage()),
+        );
+      },
     );
   }
 
