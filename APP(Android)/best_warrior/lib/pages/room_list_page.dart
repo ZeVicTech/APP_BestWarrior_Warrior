@@ -13,7 +13,11 @@ class RoomListPage extends StatefulWidget {
 }
 
 class _RoomListPageState extends State<RoomListPage> {
-  int selectedIndex = 0;//전체방을 보기위한 인덱스
+  int selectedIndex = 0; //전체방을 보기위한 인덱스
+  final TextEditingController _controller_rname = TextEditingController();
+  List<String> dropdownList = ['주특기', '화생방', '경계', '정신전력', '개인화기', '체력'];
+  String selectedDropdown = '주특기';
+
   List<Tech> _chipsList = [
     Tech("전체", Colors.black), //과목코드 0
     Tech("주특기", Colors.green), //과목코드 1
@@ -21,7 +25,7 @@ class _RoomListPageState extends State<RoomListPage> {
     Tech("경계", Colors.deepOrange), //과목코드 3
     Tech("정신전력", Colors.cyan), //과목코드 4
     Tech("개인화기", Colors.yellow), //과목코드 5
-    Tech("체력", Color.fromARGB(255, 238, 30, 186)) //과목코드 6
+    Tech("체력", Colors.purple) //과목코드 6
   ];
 
   List<Room> _roomList = [
@@ -45,23 +49,126 @@ class _RoomListPageState extends State<RoomListPage> {
         ),
         body: Container(
             alignment: Alignment.center,
-            child: Column(
-              children: [
-                Container(
-                  height: 100,
-                  child: Wrap(
-                    spacing: 6,
-                    direction: Axis.horizontal,
-                    children: techChips(),
-                  ),
+            child: Column(children: [
+              Container(
+                height: 100,
+                child: Wrap(
+                  spacing: 6,
+                  direction: Axis.horizontal,
+                  children: techChips(), //병기본 과목들 토글버튼
                 ),
-                Expanded(
-                  child: ListView(
+              ),
+              Expanded(
+                child: Stack(children: [
+                  ListView(
                     children: setRoom(),
                   ),
-                ),
-              ],
-            )));
+                  Positioned(
+                      bottom: 15,
+                      right: 10,
+                      child: RawMaterialButton(
+                          //방추가하기 +버튼
+                          child: Icon(Icons.add, size: 35.0),
+                          fillColor: Colors.green,
+                          padding: EdgeInsets.all(15.0),
+                          shape: CircleBorder(),
+                          onPressed: () {
+                            //방 만들기 팝업창
+                            showDialog(
+                                context: context,
+                                barrierDismissible: false, // 바깥 영역 터치시 닫을지 여부
+                                builder: (BuildContext context) {
+                                  return AlertDialog(
+                                    title: Text('방 만들기'),
+                                    content: Column(
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          TextField(
+                                              controller: _controller_rname,
+                                              decoration: InputDecoration(
+                                                labelText: "방이름",
+                                              )),
+                                          DropdownButton(
+                                            //과목이름
+                                            value: selectedDropdown,
+                                            items:
+                                                dropdownList.map((String item) {
+                                              return DropdownMenuItem<String>(
+                                                child: Text('$item'),
+                                                value: item,
+                                              );
+                                            }).toList(),
+                                            onChanged: (dynamic value) {
+                                              setState(() {
+                                                selectedDropdown = value;
+                                              });
+                                            },
+                                          ),
+                                        ]),
+                                    actions: [
+                                      TextButton(
+                                        child: const Text('Cancel'),
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                      ),
+                                      TextButton(
+                                        child: const Text('확인'),
+                                        onPressed: () {
+                                          switch (selectedDropdown) {
+                                            case "주특기":
+                                              _roomList.add(Room(
+                                                  _controller_rname.text,
+                                                  selectedDropdown,
+                                                  "엄득용",
+                                                  1));
+                                              break;
+                                            case "화생방":
+                                              _roomList.add(Room(
+                                                  _controller_rname.text,
+                                                  selectedDropdown,
+                                                  "엄득용",
+                                                  2));
+                                              break;
+                                            case "경계":
+                                              _roomList.add(Room(
+                                                  _controller_rname.text,
+                                                  selectedDropdown,
+                                                  "엄득용",
+                                                  3));
+                                              break;
+                                            case "정신전력":
+                                              _roomList.add(Room(
+                                                  _controller_rname.text,
+                                                  selectedDropdown,
+                                                  "엄득용",
+                                                  4));
+                                              break;
+                                            case "개인화기":
+                                              _roomList.add(Room(
+                                                  _controller_rname.text,
+                                                  selectedDropdown,
+                                                  "엄득용",
+                                                  5));
+                                              break;
+                                            case "체력":
+                                              _roomList.add(Room(
+                                                  _controller_rname.text,
+                                                  selectedDropdown,
+                                                  "엄득용",
+                                                  6));
+                                              break;
+                                          }
+                                          Navigator.of(context).pop();
+                                        },
+                                      ),
+                                    ],
+                                  );
+                                });
+                          }))
+                ]),
+              ),
+            ])));
   }
 
   List<Widget> techChips() {
@@ -88,9 +195,9 @@ class _RoomListPageState extends State<RoomListPage> {
 
   List<Widget> setRoom() {
     List<Widget> rooms = [];
-    if(selectedIndex == 0){
-        return _roomList;
-      }
+    if (selectedIndex == 0) {
+      return _roomList;
+    }
     for (int i = 0; i < _roomList.length; i++) {
       if (selectedIndex == _roomList[i].subjectCode) {
         rooms.add(_roomList[i]);

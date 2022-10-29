@@ -112,7 +112,7 @@ class Room extends StatelessWidget {
       case 5:
         return Colors.yellow;
       case 6:
-        return Color.fromARGB(255, 231, 24, 24);
+        return Colors.purple;
       default:
         return Colors.green;
     }
