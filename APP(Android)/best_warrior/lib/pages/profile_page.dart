@@ -34,6 +34,7 @@ class ProfilePage extends StatelessWidget {
                           child: const Text('확인'),
                           onPressed: () {
                             signOut(); //로그아웃
+                            Navigator.of(context).pop();
                           },
                         ),
                       ],

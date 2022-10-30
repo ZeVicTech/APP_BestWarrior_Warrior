@@ -26,7 +26,7 @@ class ProfileHeader extends StatelessWidget {
         width: 100,
         height: 100,
         child: CircleAvatar(
-          backgroundImage: AssetImage("assets/basic.png"),
+          backgroundImage: AssetImage("assets/soldier.jpg"),
         ));
   }
 

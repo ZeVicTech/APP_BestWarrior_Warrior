@@ -142,7 +142,7 @@ class Meet_Header extends StatelessWidget {
             width: 100,
             height: 100,
             child: CircleAvatar(
-              backgroundImage: AssetImage("assets/soldier.jpg"),
+              backgroundImage: AssetImage("assets/basic.png"),
             )),
         SizedBox(width: 20),
         Column(
@@ -211,7 +211,7 @@ class Meet_Header extends StatelessWidget {
               SizedBox(height: 3),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 13),
-                child: Text("김영승", style: TextStyle(fontSize: 12),),
+                child: Text(name, style: TextStyle(fontSize: 12),),
               ),
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 5),

@@ -64,7 +64,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget _title() {
     return Column(
       children: [
-        Image.asset(width: 300,height: 300,"assets/best_warrior-logo.png"),
+        Image.asset(fit: BoxFit.fill,"assets/best_warrior-logo.png"),
       ],
     );
   }
