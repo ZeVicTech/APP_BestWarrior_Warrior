@@ -12,7 +12,7 @@
 
 ### 회원가입 & 로그인 기능 & 로그아웃
 필요한 정보를 입력후 회원가입후 로그인 합니다.
-![login](https://github.com/osamhack2022-v2/APP_BestWarrior_Warrior/blob/main/Logo_image/%EB%A1%9C%EA%B7%B8%EC%9D%B8%EA%B8%B0%EB%8A%A5_AdobeExpress.gif)
+
 ### 모임 일정 관리
 달력을 통해서 모임의 일정을 추가하고 관리할 수 있습니다
   
