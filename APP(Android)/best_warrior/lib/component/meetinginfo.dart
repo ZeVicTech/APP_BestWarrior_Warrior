@@ -33,7 +33,7 @@ class Meet_Header extends StatelessWidget {
         width: 100,
         height: 100,
         child: CircleAvatar(
-          backgroundImage: AssetImage("assets/soldier.jpg"),
+          backgroundImage: AssetImage("assets/profile.png"),
         ));
   }
 
