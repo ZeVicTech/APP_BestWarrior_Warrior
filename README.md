@@ -12,7 +12,9 @@
 
 ### 회원가입 & 로그인 기능 & 로그아웃
 필요한 정보를 입력후 회원가입후 로그인 합니다.
-
+<img src="image/signup2_AdobeExpress.gif" width="100" height="200"/>
+<img src="image/로그인기능_AdobeExpress.gif" width="100" height="200"/>
+<img src="image/logout2_AdobeExpress.gif" width="100" height="200"/>
 ### 모임 일정 관리
 달력을 통해서 모임의 일정을 추가하고 관리할 수 있습니다
   
