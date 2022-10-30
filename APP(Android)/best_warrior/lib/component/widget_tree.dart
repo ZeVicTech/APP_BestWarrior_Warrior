@@ -1,5 +1,4 @@
 import 'package:best_warrior/component/auth.dart';
-import 'package:best_warrior/pages/home_page.dart';
 import 'package:best_warrior/pages/login_page.dart';
 import 'package:best_warrior/pages/main_page.dart';
 import 'package:best_warrior/pages/meetingroom_page.dart';
