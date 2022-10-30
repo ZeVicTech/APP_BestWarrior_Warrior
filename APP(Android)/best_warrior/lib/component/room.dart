@@ -44,7 +44,7 @@ class Room extends StatelessWidget {
               ),
               Row(
                 children: [
-                  Text(_subject,
+                  Text("과목:"+_subject,
                       style: TextStyle(
                         fontSize: 15,
                         //color: Colors.white,
@@ -57,7 +57,7 @@ class Room extends StatelessWidget {
                   SizedBox(
                     width: 3,
                   ),
-                  Text(_mentor,
+                  Text("멘토:"+_mentor,
                       style: TextStyle(
                         fontSize: 15,
                         //color: Colors.white,

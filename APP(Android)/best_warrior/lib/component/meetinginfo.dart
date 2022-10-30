@@ -194,12 +194,12 @@ class Meet_Header extends StatelessWidget {
           ]),
       SizedBox(height: 5),
       Text("멘티들의 리뷰"),
-      meet_item(),
-      meet_item(),
-      meet_item()
+      meet_item("김민석","좋아요"),
+      meet_item("안정환","잘가르쳐줘요"),
+      meet_item("최훈석","좋네요")
     ]);
   }
-  Widget meet_item(){
+  Widget meet_item(String name, String write){
     return Container(
       margin: EdgeInsets.symmetric(vertical: 6),
       child: Row(
@@ -224,7 +224,7 @@ class Meet_Header extends StatelessWidget {
                     bottomLeft: Radius.circular(0),
                 bottomRight: Radius.circular(30))),
                 child: Text(
-                  "너무 좋아용", style: TextStyle(color: Colors.white, fontSize: 12)),
+                  write, style: TextStyle(color: Colors.white, fontSize: 12)),
               )
             ]
           )

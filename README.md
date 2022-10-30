@@ -47,7 +47,9 @@
 
 ## 기술 스택 (Technique Used) 
 ### Server(back-end)
--Firebase
+-Firebase Authentication  
+-Firebase Realtime Database  
+-Firebase Cloud Firestore
  
 ### Front-end
 -Flutter  
