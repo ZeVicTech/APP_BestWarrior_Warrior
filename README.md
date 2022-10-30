@@ -78,8 +78,8 @@ $ cd APP\(Android\)/best_warrior/
 $ flutter build apk  
 ```
 
-
 ## 프로젝트 사용법 (Getting Started)
+
 
 ## 팀 정보 (Team Information)
 - Kim yeong seung  (ksy980501@gmail.com), Github Id: ZeVicTech
