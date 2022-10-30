@@ -46,6 +46,7 @@
 ## 프로젝트 관리
 * [Pigma](https://www.figma.com/file/hkQDxDwJb9ALVmcVLKTr04/%EB%B2%A0%EC%8A%A4%ED%8A%B8%EC%9B%8C%EB%A6%AC%EC%96%B4?node-id=0%3A1)
 * [Git Projects Board](https://github.com/orgs/osamhack2022-v2/projects/6/views/1)
+* [sketch](image/sketch.png)
 
 ## 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
 * sdk: '>=2.18.1 <3.0.0'sdk: '>=2.18.1 <3.0.0'
