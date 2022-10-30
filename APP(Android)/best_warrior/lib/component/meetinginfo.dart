@@ -41,14 +41,14 @@ class Meet_Header extends StatelessWidget {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       Text(
         this.title,
-        style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
+        style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
       ),
       Text(
         "멘토:"+this.mentor,
         style: TextStyle(fontSize: 15),
       ),
       Text(
-        "소개"+this.introduce,
+        "소개:"+this.introduce,
         style: TextStyle(fontSize: 15),
       ),
     ]);

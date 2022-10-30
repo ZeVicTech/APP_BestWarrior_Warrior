@@ -30,7 +30,7 @@ class MeetingroomPage extends StatelessWidget {
           SizedBox(height: 20),
           Meet_Header(_name,_mentor,introduce),
           SizedBox(height: 10),
-          Calendar(),    //달력
+          Calendar(_name,_mentor,introduce),    //달력
           ],
       )
     );

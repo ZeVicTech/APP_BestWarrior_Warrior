@@ -5,10 +5,18 @@ import 'meetinginfo.dart';
 
 class Calendar extends StatefulWidget {
   @override
-  _CalendarState createState() => _CalendarState();
+  String _name;
+  String _mentor;
+  String introduce;
+  Calendar(this._name,this._mentor,this.introduce);
+  _CalendarState createState() => _CalendarState(_name,_mentor,introduce);
 }
 
-class _CalendarState extends State<Calendar> {    
+class _CalendarState extends State<Calendar> {
+  String _name;
+  String _mentor;
+  String introduce; 
+  _CalendarState(this._name,this._mentor,this.introduce);
   late Map<DateTime, List<Event>> selectedEvents;
   CalendarFormat format = CalendarFormat.month;
   DateTime selectedDay = DateTime.now();
@@ -153,7 +161,7 @@ class _CalendarState extends State<Calendar> {
                 ),
               );
             }),
-        Meet_Header().meet_chat(context),
+        Meet_Header(_name,_mentor,introduce).meet_chat(context),
       ])
     ]);
   }
