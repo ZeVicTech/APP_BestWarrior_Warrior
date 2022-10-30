@@ -82,11 +82,11 @@ $ flutter build apk
 
 ## 프로젝트 사용법 (Getting Started)
 <img src="image/login.jpg" width="200" height="300"/>  
-register instead 클릭
+register instead 클릭  
 <img src="image/signup.jpg" width="200" height="300"/>
-정보입력후 register 클릭
+정보입력후 register 클릭  
 <img src="image/mainshot.jpg" width="200" height="300"/>
-다양하게 즐기시면 됩니다
+다양하게 즐기시면 됩니다  
 
 ## 팀 정보 (Team Information)
 - Kim yeong seung  (ksy980501@gmail.com), Github Id: ZeVicTech
