@@ -7,7 +7,6 @@
   
 저희 주변에서도 특급전사에 도전하지만 실패한 사람들이 많았습니다. 실패한 이유들을 보면 노력 부족인 경우도 있지만 노하우가 부족하거나 혼자 준비하다가 제풀에 지쳐서 포기하는 경우가 많았습니다. 그러던 중 특급전사를 딴 선임이 특급전사를 따고 싶어하는 후임들과 스터디를 만들어 노하우와 공부방법을 가르쳐 주는 것을 보고 특급전사를 목표로하는 인원들을 위한 소모임 플랫폼 앱이 하나 있으면 좋겠다는 생각이 들어 이번 프로젝트를 진행하게 됐습니다.
 
-
 ## 기능 설명
 
 ### 회원가입 & 로그인 기능 & 로그아웃
@@ -74,10 +73,11 @@
 
 ## 설치 안내 (Installation Process)
 ```bash
-$ git clone git주소
-$ yarn or npm install
-$ yarn start or npm run start
+$ git clone https://github.com/osamhack2022-v2/APP_BestWarrior_Warrior.git  
+$ cd APP\(Android\)/best_warrior/  
+$ flutter build apk  
 ```
+
 
 ## 프로젝트 사용법 (Getting Started)
 
