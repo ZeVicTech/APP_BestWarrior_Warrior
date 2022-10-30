@@ -29,7 +29,7 @@
 <img src="image/addroom_AdobeExpress.gif" width="200" height="300"/>
 
 ### 내정보
-현재 내 병기본교육 성적과 가입되어있는 혹은 내가 멘토인 방들을 보고 들어갈 수 있다.
+현재 내 병기본교육 성적이 나오며 멘티나 멘토로 속한 방들을 보여준다.  
 <img src="image/myprofile_AdobeExpress.gif" width="200" height="300"/>  
 
 *마일리지  
