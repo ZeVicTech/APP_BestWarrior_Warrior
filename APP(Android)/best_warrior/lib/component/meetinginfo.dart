@@ -9,7 +9,10 @@ import '../pages/profile_page.dart';
 import 'chatting_provider.dart';
 
 class Meet_Header extends StatelessWidget {
-  Meet_Header({super.key});
+  String title;
+  String mentor;
+  String introduce;
+  Meet_Header(this.title,this.mentor,this.introduce);
 
   User user = User();
 
@@ -37,16 +40,16 @@ class Meet_Header extends StatelessWidget {
   Widget meet_profileinfo() {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       Text(
-        "사격 화이팅",
+        this.title,
         style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
       ),
       Text(
-        "사격 특급하고싶은 사람 오세요",
-        style: TextStyle(fontSize: 13),
+        "멘토:"+this.mentor,
+        style: TextStyle(fontSize: 15),
       ),
       Text(
-        "3/4",
-        style: TextStyle(fontSize: 13),
+        "소개"+this.introduce,
+        style: TextStyle(fontSize: 15),
       ),
     ]);
   }

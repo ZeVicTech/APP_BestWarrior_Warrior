@@ -10,7 +10,7 @@ class Room extends StatelessWidget {
   String _subject = '병기본 과목 이름';
   String _mentor = '멘토 이름';
   int subjectCode;
-  String introduce;
+  String introduce ='소개글';
   Room(this._name, this._subject, this._mentor, this.subjectCode, this.introduce);
 
   @override
@@ -72,7 +72,7 @@ class Room extends StatelessWidget {
                       barrierDismissible: true, // 바깥 영역 터치시 닫을지 여부
                       builder: (BuildContext context) {
                         return AlertDialog(
-                          content: Meet_Header().mentorinfo(),
+                          content: Meet_Header(this._name,this._mentor,this.introduce).mentorinfo(),
                           insetPadding: const EdgeInsets.fromLTRB(0, 80, 0, 80),
                           actions: [
                             TextButton(
@@ -92,7 +92,7 @@ class Room extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => MeetingroomPage()),
+          MaterialPageRoute(builder: (context) => MeetingroomPage(this._name,this._mentor,this.introduce)),
         );
       },
     );

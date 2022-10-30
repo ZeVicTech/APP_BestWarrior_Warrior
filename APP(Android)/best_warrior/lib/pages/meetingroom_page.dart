@@ -6,7 +6,11 @@ import '../component/meetinginfo.dart';
 import '../pages/profile_page.dart';
 
 class MeetingroomPage extends StatelessWidget {
-  const MeetingroomPage({super.key});
+  String _name = '방 제목';
+  String _subject = '병기본 과목 이름';
+  String _mentor = '멘토 이름';
+  String introduce ='소개글';
+  MeetingroomPage(this._name, this._mentor, this.introduce);
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +28,7 @@ class MeetingroomPage extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(height: 20),
-          Meet_Header(),
+          Meet_Header(_name,_mentor,introduce),
           SizedBox(height: 10),
           Calendar(),    //달력
           ],
