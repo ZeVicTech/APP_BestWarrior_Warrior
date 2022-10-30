@@ -77,8 +77,8 @@ $ git clone https://github.com/osamhack2022-v2/APP_BestWarrior_Warrior.git
 $ cd APP\(Android\)/best_warrior/  
 $ flutter build apk  
 ```
-*apk로 설치
-[apk](APP_BestWarrior_Warrior/apk/app-release (94).apk)
+-apk로 설치  
+[apk](https://github.com/osamhack2022-v2/APP_BestWarrior_Warrior/blob/main/apk/app-release%20(94).apk)
 
 ## 프로젝트 사용법 (Getting Started)
 <img src="image/login.jpg" width="200" height="300"/>  
