@@ -1,5 +1,5 @@
 # BEST_WARRIOR
-![Best_Warrior_Logo](Logo_image/best_warrior-logo.png)
+![Best_Warrior_Logo](image/best_warrior-logo.png)
 
 ## 프로젝트 소개
 ### 특급전사를 달성을 위한 소모임 앱
