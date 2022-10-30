@@ -10,7 +10,8 @@ class Room extends StatelessWidget {
   String _subject = '병기본 과목 이름';
   String _mentor = '멘토 이름';
   int subjectCode;
-  Room(this._name, this._subject, this._mentor, this.subjectCode);
+  String introduce;
+  Room(this._name, this._subject, this._mentor, this.subjectCode, this.introduce);
 
   @override
   Widget build(BuildContext context) {

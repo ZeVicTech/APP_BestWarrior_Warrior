@@ -1,9 +1,11 @@
 import 'package:best_warrior/component/room.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/widgets.dart';
+import 'package:best_warrior/component/User.dart';
 
 class RoomListPage extends StatefulWidget {
   const RoomListPage({super.key});
@@ -15,6 +17,11 @@ class RoomListPage extends StatefulWidget {
 class _RoomListPageState extends State<RoomListPage> {
   int selectedIndex = 0; //전체방을 보기위한 인덱스
   final TextEditingController _controller_rname = TextEditingController();
+  final TextEditingController _controller_study = TextEditingController();
+  final TextEditingController _controller_intdc = TextEditingController();
+  DatabaseReference ref = FirebaseDatabase.instance.ref("ROOM");
+  User user = User();
+
   List<String> dropdownList = ['주특기', '화생방', '경계', '정신전력', '개인화기', '체력'];
   String selectedDropdown = '주특기';
 
@@ -29,15 +36,15 @@ class _RoomListPageState extends State<RoomListPage> {
   ];
 
   List<Room> _roomList = [
-    Room('주특기의 왕도', '주특기', '주경성', 1),
-    Room('가스! 가스! 가스!', '화생방', '이정호', 2),
-    Room('초병의 권한 맛좀 볼래', '경계', '멘토 이름', 3),
-    Room('정신무장', '정신전력', '멘토 이름', 4),
-    Room('사격 만발의 길', '개인화기', '멘토 이름', 5),
-    Room('몸만들면서 특급까지', '체력', '멘토 이름', 6),
-    Room('주특기 족집게 과외', '주특기', '멘토 이름', 1),
-    Room('방독면 5초컷', '화생방', '멘토 이름', 2),
-    Room('경계의 신', '경계', '멘토 이름', 3),
+    Room('주특기의 왕도', '주특기', '주경성', 1,"잘해봐요"),
+    Room('가스! 가스! 가스!', '화생방', '이정호', 2,"열심히 하는사람만"),
+    Room('초병의 권한 맛좀 볼래', '경계', '멘토 이름', 3,"화이팅 해봅시다"),
+    Room('정신무장', '정신전력', '멘토 이름', 4,"안녕하세요 정신무장"),
+    Room('사격 만발의 길', '개인화기', '멘토 이름', 5,"안녕하세요 사격만발의 길"),
+    Room('몸만들면서 특급까지', '체력', '멘토 이름', 6,"안녕하세요 특급"),
+    Room('주특기 족집게 과외', '주특기', '멘토 이름', 1,"안녕하세요"),
+    Room('방독면 5초컷', '화생방', '멘토 이름', 2,"안녕하세요"),
+    Room('경계의 신', '경계', '멘토 이름', 3,"안녕하세요"),
   ];
 
   @override
@@ -88,22 +95,16 @@ class _RoomListPageState extends State<RoomListPage> {
                                               decoration: InputDecoration(
                                                 labelText: "방이름",
                                               )),
-                                          DropdownButton(
-                                            //과목이름
-                                            value: selectedDropdown,
-                                            items:
-                                                dropdownList.map((String item) {
-                                              return DropdownMenuItem<String>(
-                                                child: Text('$item'),
-                                                value: item,
-                                              );
-                                            }).toList(),
-                                            onChanged: (dynamic value) {
-                                              setState(() {
-                                                selectedDropdown = value;
-                                              });
-                                            },
-                                          ),
+                                          TextField(
+                                              controller: _controller_study,
+                                              decoration: InputDecoration(
+                                                labelText: "공부할 과목",
+                                              )),
+                                          TextField(
+                                              controller: _controller_intdc,
+                                              decoration: InputDecoration(
+                                                labelText: "소개글",
+                                              )),
                                         ]),
                                     actions: [
                                       TextButton(
@@ -112,56 +113,7 @@ class _RoomListPageState extends State<RoomListPage> {
                                           Navigator.of(context).pop();
                                         },
                                       ),
-                                      TextButton(
-                                        child: const Text('확인'),
-                                        onPressed: () {
-                                          switch (selectedDropdown) {
-                                            case "주특기":
-                                              _roomList.add(Room(
-                                                  _controller_rname.text,
-                                                  selectedDropdown,
-                                                  "엄득용",
-                                                  1));
-                                              break;
-                                            case "화생방":
-                                              _roomList.add(Room(
-                                                  _controller_rname.text,
-                                                  selectedDropdown,
-                                                  "엄득용",
-                                                  2));
-                                              break;
-                                            case "경계":
-                                              _roomList.add(Room(
-                                                  _controller_rname.text,
-                                                  selectedDropdown,
-                                                  "엄득용",
-                                                  3));
-                                              break;
-                                            case "정신전력":
-                                              _roomList.add(Room(
-                                                  _controller_rname.text,
-                                                  selectedDropdown,
-                                                  "엄득용",
-                                                  4));
-                                              break;
-                                            case "개인화기":
-                                              _roomList.add(Room(
-                                                  _controller_rname.text,
-                                                  selectedDropdown,
-                                                  "엄득용",
-                                                  5));
-                                              break;
-                                            case "체력":
-                                              _roomList.add(Room(
-                                                  _controller_rname.text,
-                                                  selectedDropdown,
-                                                  "엄득용",
-                                                  6));
-                                              break;
-                                          }
-                                          Navigator.of(context).pop();
-                                        },
-                                      ),
+                                      setrooms() //방정보 저장
                                     ],
                                   );
                                 });
@@ -204,6 +156,73 @@ class _RoomListPageState extends State<RoomListPage> {
       }
     }
     return rooms;
+  }
+
+  Future<void> createroom(snapshot) async {
+    await ref.update({
+      _controller_rname.text: {
+        "방이름": _controller_rname.text,
+        "과목": _controller_study.text,
+        "멘토이름": snapshot.data[2],
+        "소개글":_controller_intdc.text
+      }
+    });
+  }
+
+  Widget setrooms() {
+    return FutureBuilder(
+        future: user.userinfo(),
+        builder: (BuildContext context, AsyncSnapshot snapshot) {
+          //해당 부분은 data를 아직 받아 오지 못했을 때 실행되는 부분
+          if (snapshot.hasData == false) {
+            return CircularProgressIndicator(); // CircularProgressIndicator : 로딩 에니메이션
+          } else {
+            return TextButton(
+              child: const Text('확인'),
+              onPressed: () {
+                switch (_controller_study.text) {
+                  case "주특기":
+                    _roomList.add(Room(_controller_rname.text,
+                        _controller_study.text, snapshot.data[2], 1,_controller_intdc.text));
+                    createroom(snapshot);
+                    Navigator.of(context).pop();
+                    break;
+                  case "화생방":
+                    _roomList.add(Room(_controller_rname.text,
+                        _controller_study.text, snapshot.data[2], 2,_controller_intdc.text));
+                    createroom(snapshot);
+                    Navigator.of(context).pop();
+                    break;
+                  case "경계":
+                    _roomList.add(Room(_controller_rname.text,
+                        _controller_study.text, snapshot.data[2], 3,_controller_intdc.text));
+                    createroom(snapshot);
+                    Navigator.of(context).pop();
+                    break;
+                  case "정신전력":
+                    _roomList.add(Room(_controller_rname.text,
+                        _controller_study.text, snapshot.data[2], 4,_controller_intdc.text));
+                    createroom(snapshot);
+                    Navigator.of(context).pop();
+                    break;
+                  case "개인화기":
+                    _roomList.add(Room(_controller_rname.text,
+                        _controller_study.text, snapshot.data[2], 5,_controller_intdc.text));
+                    createroom(snapshot);
+                    Navigator.of(context).pop();
+                    break;
+                  case "체력":
+                    _roomList.add(Room(_controller_rname.text,
+                        _controller_study.text, snapshot.data[2], 6,_controller_intdc.text));
+                    createroom(snapshot);
+                    Navigator.of(context).pop();
+                    break;
+                  default:
+                }
+              },
+            );
+          }
+        });
   }
 }
 
