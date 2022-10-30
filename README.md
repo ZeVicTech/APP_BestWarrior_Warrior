@@ -26,7 +26,7 @@
 
 ### 분야별 모임리스트 & 모임 생성
 어떤 모임들이 있는지 한눈에 혹은 분야별로 볼 수 있습니다.  
-<img src="image/logout2_AdobeExpress.gif" width="200" height="300"/>
+<img src="image/addroom_AdobeExpress.gif" width="200" height="300"/>
 
 ### 내정보
 현재 내 병기본교육 성적과 가입되어있는 혹은 내가 멘토인 방들을 보고 들어갈 수 있다.
