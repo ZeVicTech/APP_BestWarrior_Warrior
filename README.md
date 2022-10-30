@@ -30,18 +30,18 @@
 
 ### 내정보
 현재 내 병기본교육 성적과 가입되어있는 혹은 내가 멘토인 방들을 보고 들어갈 수 있다.
-<img src="image/logout2_AdobeExpress.gif" width="200" height="300"/>  
+<img src="image/myprofile_AdobeExpress.gif" width="200" height="300"/>  
 
 *마일리지  
 멘토들이 멘티들을 특급전사를 만들때마다 얻는 이득으로 마일리지는 휴가로 교환할 수 있습니다(지휘관님들 재량)  
 
 ### 멘토정보 
 방을 만든 멘토의  병기본교육 성적과 그동안의 멘티들의 리뷰를 모임 가입전에 확인 할 수 있습니다
-<img src="image/logout2_AdobeExpress.gif" width="200" height="300"/>   
+<img src="image/mentor_AdobeExpress.gif" width="200" height="300"/>   
 
 ### 순위표
 부대 내 병기본교육 성적의 순위를 한눈에 볼 수 있도록 만들어 재미를 더했습니다.  
-<img src="image/logout2_AdobeExpress.gif" width="200" height="300"/>
+<img src="image/ranking_AdobeExpress.gif" width="200" height="300"/>
 
 
 ## 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
