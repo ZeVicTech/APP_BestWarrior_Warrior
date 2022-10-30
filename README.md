@@ -43,6 +43,9 @@
 부대 내 병기본교육 성적의 순위를 한눈에 볼 수 있도록 만들어 재미를 더했습니다.  
 <img src="image/ranking_AdobeExpress.gif" width="200" height="300"/>
 
+## 프로젝트 관리
+* [Pigma](https://www.figma.com/file/hkQDxDwJb9ALVmcVLKTr04/%EB%B2%A0%EC%8A%A4%ED%8A%B8%EC%9B%8C%EB%A6%AC%EC%96%B4?node-id=0%3A1)
+* [Git Projects Board](https://github.com/orgs/osamhack2022-v2/projects/6/views/1)
 
 ## 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
 * sdk: '>=2.18.1 <3.0.0'sdk: '>=2.18.1 <3.0.0'
@@ -76,10 +79,6 @@ $ yarn start or npm run start
 ```
 
 ## 프로젝트 사용법 (Getting Started)
-
-## 프로젝트 관리
-* [Pigma](https://www.figma.com/file/hkQDxDwJb9ALVmcVLKTr04/%EB%B2%A0%EC%8A%A4%ED%8A%B8%EC%9B%8C%EB%A6%AC%EC%96%B4?node-id=0%3A1)
-* [Git Projects Board](https://github.com/orgs/osamhack2022-v2/projects/6/views/1)
 
 ## 팀 정보 (Team Information)
 - Kim yeong seung  (ksy980501@gmail.com), Github Id: ZeVicTech
