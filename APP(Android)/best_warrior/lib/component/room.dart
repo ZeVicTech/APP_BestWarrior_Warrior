@@ -4,11 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:best_warrior/component/meetinginfo.dart';
+import 'dart:math';
 
 class Room extends StatelessWidget {
   String _name = '방 제목';
   String _subject = '병기본 과목 이름';
   String _mentor = '멘토 이름';
+  int num=Random().nextInt(100) + 1;
   int subjectCode;
   String introduce ='소개글';
   Room(this._name, this._subject, this._mentor, this.subjectCode, this.introduce);
@@ -72,7 +74,7 @@ class Room extends StatelessWidget {
                       barrierDismissible: true, // 바깥 영역 터치시 닫을지 여부
                       builder: (BuildContext context) {
                         return AlertDialog(
-                          content: Meet_Header(this._name,this._mentor,this.introduce).mentorinfo(),
+                          content: Meet_Header(this._name,this._mentor,this.introduce).mentorinfo(this._mentor,this.num,this.introduce),
                           insetPadding: const EdgeInsets.fromLTRB(0, 80, 0, 80),
                           actions: [
                             TextButton(

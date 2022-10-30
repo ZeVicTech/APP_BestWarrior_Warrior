@@ -48,7 +48,7 @@ class Meet_Header extends StatelessWidget {
         style: TextStyle(fontSize: 15),
       ),
       Text(
-        "소개:"+this.introduce,
+        this.introduce,
         style: TextStyle(fontSize: 15),
       ),
     ]);
@@ -128,7 +128,7 @@ class Meet_Header extends StatelessWidget {
         });
   }
 
-  Widget mentorinfo() {
+  Widget mentorinfo(String name,int num, String introduce) {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
@@ -149,15 +149,15 @@ class Meet_Header extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "병장 엄득용",
+              name,
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
             ),
             Text(
-              "특급만든횟수:100",
+              "특급만든횟수:$num번",
               style: TextStyle(fontSize: 15),
             ),
             Text(
-              "특기:체육",
+              introduce,
               style: TextStyle(fontSize: 15),
             ),
           ],

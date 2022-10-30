@@ -51,28 +51,27 @@ class _ProfileTabState extends State<ProfileTab>
         ListView(
           scrollDirection: Axis.vertical,
           children: 
-            _roomList
+            mento_roomList
           ,
         ),
         ListView(
           scrollDirection: Axis.vertical,
-          children: _roomList,
+          children: menti_roomList,
         ),
       ],
     );
   }
 
-  List<Widget> _roomList = [
+  List<Widget> menti_roomList = [
     Room('주특기의 왕도', '주특기', '주경성', 1,"잘해봐요"),
-    Room('가스! 가스! 가스!', '화생방', '이정호', 2,"열심히 하는사람만"),
-    Room('초병의 권한 맛좀', '경계', '멘토 이름', 3,"화이팅 해봅시다"),
-    Room('정신무장', '정신전력', '멘토 이름', 4,"안녕하세요 정신무장"),
-    Room('사격 만발의 길', '개인화기', '멘토 이름', 5,"안녕하세요 사격만발의 길"),
-    Room('몸만들면서 특급까지', '체력', '멘토 이름', 6,"안녕하세요 특급"),
-    Room('주특기 족집게 과외', '주특기', '멘토 이름', 1,"안녕하세요"),
-    Room('방독면 5초컷', '화생방', '멘토 이름', 2,"안녕하세요"),
-    Room('경계의 신', '경계', '멘토 이름', 3,"안녕하세요"),
+    Room('주특기 족집게 과외', '주특기', '김시호', 1,"안녕하세요"),
   ];
+
+    List<Widget> mento_roomList = [
+    Room('방독면 5초컷', '화생방', '엄득용', 2,"안녕하세요"),
+    Room('경계의 신', '경계', '엄득용', 3,"안녕하세요"),
+  ];
+
 
   
 }
