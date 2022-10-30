@@ -15,27 +15,33 @@
 <img src="image/signup2_AdobeExpress.gif" width="200" height="300"/>
 <img src="image/로그인기능_AdobeExpress.gif" width="200" height="300"/>
 <img src="image/logout2_AdobeExpress.gif" width="200" height="300"/>
-### 모임 일정 관리
-달력을 통해서 모임의 일정을 추가하고 관리할 수 있습니다
-  
-### 모임 채팅
-모임 구성원들 끼리 실시간으로 채팅을 이용하여 여러가지 질문이나 일정을 잡을 수 있습니다
 
-### 분야별 모임 검색 & 모임 생성
-어떤 모임들이 있는지 한눈에 혹은 분야별로 볼 수 있습니다.
+### 모임 일정 관리
+달력을 통해서 모임의 일정을 추가하고 관리할 수 있습니다  
+<img src="image/calendar_AdobeExpress.gif" width="200" height="300"/>
+
+### 모임 채팅
+모임 구성원들 끼리 실시간으로 채팅을 이용하여 여러가지 질문이나 일정을 잡을 수 있습니다.    
+<img src="image/chatting_AdobeExpress.gif" width="200" height="300"/>
+
+### 분야별 모임리스트 & 모임 생성
+어떤 모임들이 있는지 한눈에 혹은 분야별로 볼 수 있습니다.  
+<img src="image/logout2_AdobeExpress.gif" width="200" height="300"/>
 
 ### 내정보
 현재 내 병기본교육 성적과 가입되어있는 혹은 내가 멘토인 방들을 보고 들어갈 수 있다.
+<img src="image/logout2_AdobeExpress.gif" width="200" height="300"/>  
 
-*마일리지
-멘토들이 멘티들을 특급을 만들때마다 얻는 이득으로 마일리지는 휴가로 교환할 수 있습니다(지휘관님들 재량)
+*마일리지  
+멘토들이 멘티들을 특급을 만들때마다 얻는 이득으로 마일리지는 휴가로 교환할 수 있습니다(지휘관님들 재량)  
 
 ### 멘토정보 
-방을 만든 멘토의  병기본교육 성적과 그동안의 멘티들의 리뷰를 모임 가입전에 확인 할 수 있습니다 
+방을 만든 멘토의  병기본교육 성적과 그동안의 멘티들의 리뷰를 모임 가입전에 확인 할 수 있습니다
+<img src="image/logout2_AdobeExpress.gif" width="200" height="300"/>   
 
 ### 순위표
-부대 내 병기본교육 성적의 순위를 한눈에 볼 수 있도록 만들어 재미를 더했습니다.
-
+부대 내 병기본교육 성적의 순위를 한눈에 볼 수 있도록 만들어 재미를 더했습니다.  
+<img src="image/logout2_AdobeExpress.gif" width="200" height="300"/>
 
 
 ## 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
